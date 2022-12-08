@@ -22,19 +22,19 @@ pipelines:
         jobs:
           build_image:
             timeout: 0
-            elastic_profile_id: demo-app
+            elastic_profile_id: k8s-elastic-agent1
             artifacts:
             - external:
                 id: bulletin-board
                 store_id: dockerhub
                 configuration:
                   options:
-                    Image: ${DOCKERHUB_USERNAME}/bulletin-board
+                    Image: technicaltalk/bulletin-board
                     Tag: ${GO_PIPELINE_LABEL}
             tasks:
             - exec:
                 arguments:
                 - -c
-                - docker build -t $DOCKERHUB_USERNAME/bulletin-board:$GO_PIPELINE_LABEL . -f Dockerfile.application
+                - docker build -t technicaltalk/bulletin-board:$GO_PIPELINE_LABEL . -f Dockerfile.application
                 command: /bin/bash
                 run_if: passed
