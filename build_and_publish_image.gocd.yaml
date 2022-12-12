@@ -22,7 +22,7 @@ pipelines:
         jobs:
           build_image:
             timeout: 0
-            elastic_profile_id: k8s-elastic-agent1
+            elastic_profile_id: k8s-elastic-agent4
             artifacts:
             - external:
                 id: bulletin-board
