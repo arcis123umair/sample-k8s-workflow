@@ -26,7 +26,7 @@ pipelines:
             artifacts:
             - external:
                 id: bulletin-board
-                store_id: dockerhub
+                store_id: my-cred
                 configuration:
                   options:
                     Image: technicaltalk/bulletin-board
