@@ -27,7 +27,7 @@ pipelines:
         jobs:
           deploy:
             timeout: 0
-            elastic_profile_id: k8s-elastic-agent1
+            elastic_profile_id: k8s-elastic-agent4
             tasks:
             - fetch:
                 options:
